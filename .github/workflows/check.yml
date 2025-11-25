@@ -20,7 +20,7 @@ jobs:
     steps:
 
       - name: Checkout Repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Setup (Python)
         if: matrix.lint == 'python'
@@ -54,7 +54,7 @@ jobs:
         lint: [shellcheck, shfmt]
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: ShellCheck lint
         if: matrix.lint == 'shellcheck'
         uses: ludeeus/action-shellcheck@2.0.0
